@@ -1,0 +1,14 @@
+# Target labels
+ stb-download
+# Source files and their labels
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/stb-download
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/ca160405b2009c0bded303e0e2cbfc57/stb-download.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/ef855a518483dca40bf82fb970c1f612/stb-download-complete.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-build.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-configure.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-download.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-install.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-mkdir.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-patch.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-test.rule
+D:/Animation3DProjects/Assignment2/external/.cache/stb/CMakeFiles/9ebc4c34a808d137804309cd33255b61/stb-download-update.rule

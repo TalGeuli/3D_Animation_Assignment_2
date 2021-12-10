@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/libigl-imgui-download"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/e2b61a8f283bfad4454c64a334e0ae94/libigl-imgui-download.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/7389edb77bb32803d8e7e64725b7332e/libigl-imgui-download-complete.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-build.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-configure.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-download.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-install.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-mkdir.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-patch.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-test.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment2/external/.cache/libigl-imgui/CMakeFiles/297ebf3b3dc2fac74d162ed9eb1acafc/libigl-imgui-download-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libigl-imgui-download"
+		],
+		"name" : "libigl-imgui-download"
+	}
+}
