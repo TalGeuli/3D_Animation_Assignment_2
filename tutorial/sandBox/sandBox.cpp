@@ -195,10 +195,14 @@ bool SandBox::Is_Collide(Eigen::AlignedBox <double, 3>& A_box, int indexA, Eigen
 	
 	Eigen::Vector3d ARightCol(data_list.at(indexA).MakeTransd()(0, 3), data_list.at(indexA).MakeTransd()(1, 3), data_list.at(indexA).MakeTransd()(2, 3));
 	Eigen::Vector3d BRightCol(data_list.at(indexB).MakeTransd()(0, 3), data_list.at(indexB).MakeTransd()(1, 3), data_list.at(indexB).MakeTransd()(2, 3));
-	Eigen::Vector3d D =  (B_box.center() + BRightCol) - (A_box.center() + ARightCol);
+	Eigen::Vector3d C0 = A_box.center();
+	Eigen::Vector3d C1 = B_box.center();
+	//Eigen::Vector3d D =  (B_box.center() + BRightCol) - (A_box.center() + ARightCol);
 	
 	Eigen::Matrix3d A = data_list.at(indexA).GetRotation();
 	Eigen::Matrix3d B = data_list.at(indexB).GetRotation();
+
+	Eigen::Vector3d D = (B*C1 + BRightCol) - (A*C0 + ARightCol);
 
 	Eigen::Vector3d A0 (A(0, 0), A(1, 0), A(2, 0));
 	Eigen::Vector3d A1 (A(0, 1), A(1, 1), A(2, 1));
