@@ -160,77 +160,33 @@ bool SandBox::Check_Collision()
 	return false;
 }
 
-bool SandBox::Check_Collision(igl::AABB<Eigen::MatrixXd, 3>& A, int indexA, igl::AABB<Eigen::MatrixXd, 3>& B, int indexB )
+bool SandBox::Check_Collision(igl::AABB<Eigen::MatrixXd, 3>& A, int indexA, igl::AABB<Eigen::MatrixXd, 3>& B, int indexB)
 {
 	Eigen::AlignedBox <double, 3> A_box = A.m_box;
 	Eigen::AlignedBox <double, 3> B_box = B.m_box;
-	
-	bool childCollide = false;
-	
-	if (B.is_leaf()& A.is_leaf())
-	{
-		if (Is_Collide(A_box,indexA, B_box, indexB)) {
-			create_bounding_box(B_box, indexB);
-			create_bounding_box(A_box, indexA);
-			boxesCreated = true;
-			return true;
-		}
-		return false;
-	}
-	if (B.is_leaf())
-	{
-		if (Is_Collide(A_box, indexA, B_box, indexB))
-		{
-			childCollide = Check_Collision(*A.m_right, indexA, B, indexB);
-			if (!childCollide & !boxesCreated)
-				childCollide = Check_Collision(*A.m_left, indexA, B, indexB);
-			if (!childCollide & !boxesCreated)
-			{
-				create_bounding_box(B_box, indexB);
-				create_bounding_box(A_box, indexA);
-				boxesCreated = true;
-				return true;
-			}
-		}
-		return childCollide;
-	}
-	if (A.is_leaf())
-	{
-		if (Is_Collide(A_box, indexA, B_box, indexB))
-		{
-			childCollide = Check_Collision(A, indexA, *B.m_right, indexB);
-			if (!childCollide & !boxesCreated)
-				childCollide = Check_Collision(A, indexA, *B.m_left, indexB);
-			if (!childCollide & !boxesCreated)
-			{
-				create_bounding_box(B_box, indexB);
-				create_bounding_box(A_box, indexA);
-				boxesCreated = true;
-				return true;
-			}
-		}
-		return childCollide;
-	}
+
+
+
 	if (Is_Collide(A_box, indexA, B_box, indexB))
 	{
-		childCollide = Check_Collision(*A.m_right, indexA, *B.m_left, indexB);
-		if (!childCollide & !boxesCreated)
-			childCollide = Check_Collision(*A.m_right, indexA, *B.m_right, indexB);
-		if (!childCollide & !boxesCreated)
-			childCollide = Check_Collision(*A.m_left, indexA, *B.m_left, indexB);
-		if (!childCollide & !boxesCreated)
-			childCollide = Check_Collision(*A.m_left, indexA, *B.m_right, indexB);
-		if (!childCollide & !boxesCreated) 
+		if (A.is_leaf() & B.is_leaf())
 		{
 			create_bounding_box(B_box, indexB);
 			create_bounding_box(A_box, indexA);
-			boxesCreated = true;
 			return true;
 		}
-		return childCollide;
+		if (A.is_leaf())
+		{
+			return Check_Collision(A, indexA, *B.m_left, indexB) || Check_Collision(A, indexA, *B.m_right, indexB);
+		}
+		if (B.is_leaf())
+		{
+			return Check_Collision(*A.m_left, indexA, B, indexB) || Check_Collision(*A.m_right, indexA, B, indexB);
+		}
+		return Check_Collision(*A.m_left, indexA, *B.m_left, indexB) || Check_Collision(*A.m_left, indexA, *B.m_right, indexB) || Check_Collision(*A.m_right, indexA, *B.m_left, indexB) || Check_Collision(*A.m_right, indexA, *B.m_right, indexB);
 	}
 	return false;
-	
+
 
 }
 
